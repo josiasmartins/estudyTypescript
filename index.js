@@ -1,24 +1,157 @@
 "use strict";
 /**
- *  NEVER
- *      indica que algo nunca deve acontecer
+ *      POO(PROGRAMAÇÃO ORIENTADO A OBJETOS)
+ *          paradigma é a sua identidade. Classe descreve os serviços oferecidos
+ *          por seus objetos e quais informações eles podem armazenar
+ *          um objeto é a representação do mundo real
+ *
+ *      CLASSES
+ *          uma classe é um molde com o qual os objetos são moldados
+ *          nele passamos quais atributos um objeto deve ter e quais ações deve tomar
  */
-function verificandoTipo(x) {
-    if (typeof x === "string") {
-        return true;
+var conta = /** @class */ (function () {
+    function conta() {
     }
-    else if (typeof x === "number") {
-        return false;
-    }
-    return fail("Esse método não aceita esse tipo de type!");
-}
-function fail(message) { throw new Error(message); }
-verificandoTipo("teste String");
-verificandoTipo(10);
-var ativo = true;
+    return conta;
+}());
+/**
+ *      FOREACH
+ *          foreach é uma simplificação do operador for para trabalhar com coleções de dados
+ *          ele permite acessar cada elemento individualmente iterando sobre toda a coleção
+ */
+// var language = ["c#", "java", "javascript", "typescript"];
+// language.forEach(element => {
+//     console.log(element);
+// });
+/**
+ *      FOR
+ *          Semelhante ao while, repete o bloco de código enquanto for verdadeira
+ *          a diferença é que passamos um volor inícial e final para o loop
+ */
+// var languages = ["c#", "java", "javascript", "typescript"];
+// for(let i = 0; i < languages.length; i++) {
+//     console.log(languages[i]);
+// }
+/**
+ *      WHILE
+ *          A estrutura de condição while
+ *          ele repete uma condição enquanto ele for verdadeira
+ *
+ *      DO-WHILE
+ *          a diferente entre os dois é que o do-while vai repiter pelo uma vez
+ *          mesmo sendo falso
+ */
+// let condicao = true;
+// while(condicao) {
+//     console.log("Carregando...");
+// }
+//  do-while
+// let condicao1 = true;
+// {
+//     console.log("load...")
+// }
+// while(condicao1);
+/**
+ *      SWITCH
+ *          A instrução if é indicado para pequenos trechos.
+ *          o switch é indicado para trecho maior de código
+ *          podemos validar mais de uma condição dentro switch
+ */
+// let perfil = 'admin';
+// switch(perfil) {
+//     case "superuser":
+//         console.log("Super Usuário");
+//         break;
+//     case "maneger":
+//          console.log("Gerente");
+//          break;
+//     case "admin":
+//         console.log("Administrador");
+//         break;
+//     case "user":
+//         console.log("Usuário comum");
+//         break;
+//     default:
+//         console.log("sem perfil");
+//         break;
+// }
+/**
+ *      NULLISH COALESCING
+ *          Nullish Coalescing permite verificar se os valores são null ou undefined
+ *          utilizando os operadores ??
+ */
+// let perfil = "admin";
+// let perfil = null;
+// console.log(perfil ?? 'Usuário comum')
+// console.log(perfil ?? 'Usuário comum')
+/**
+ *      ESTRUTURA DE CONTROLE DE REPETIÇÃO
+ *          Podemos pensar em estrutura de controle como um bloco que análisa as variáveis e escolhe uma direção para seguir com bases nos parâmetros predefinidos
+ *          processo básico para tomada de decisões.
+ *
+ *          IF-ELSE
+ *              trabalha com valores booleanos
+ *
+ *
+ */
+// let conditional = false;
+// if(conditional) {
+//     console.log("a variável está com um valor true");
+// } else {
+//     console.log("a variável está com o valor false")
+// }
+// // IF-ELSE-IF
+// let perfil = 'admin';
+// if(perfil == "superuser") {
+//     console.log("super usuário");
+// } else if(perfil == "admin") {
+//     console.log("Administrador");
+// } else {
+//     console.log("usuário comum");
+// }
+// // OPERADOR TERNÁRIO: avalia uma expressão booleana e retorna o resultado de uma das duas expressões
+// let perfil = "admin";
+// console.log(perfil == "superuser" ? "Super usuário": perfil == "admin" ? "Administrador": "Usuário comum");
+// console.log(perfil == "superuser" ? "Super usuário": perfil == "admin" ? "administrador": "")
+/**
+ *  TYPE ASSERTIONS
+ *      pode alterar o type de uma variável, sem que o compilador envia uma exception
+ *
+ */
+// function typeAssertions(codigoAny: any) {
+//     let codigoNumber: number = <number>codigoAny;
+//     return codigoNumber * 10;
+// }
+// typeAssertions(10);
+// /**
+//  *  NEVER
+//  *      indica que algo nunca deve acontecer
+//  *      o type NEVER não pode receber um valor
+//  */
+// // funções com exception
+// function verificandoTipo(x: string | number): boolean {
+//     if(typeof x === "string") {
+//         return true;
+//     } else if(typeof x === "number") {
+//         return false
+//     }
+//     return fail("Esse método não aceita esse tipo de type!");
+// }
+// function fail(message: string): never {throw new Error(message); }
+// verificandoTipo("teste String");
+// verificandoTipo(10);
+// let ativo = true;
+// verificandoTipo(ativo);
+// // funções sem retorno
+// function ugrade(): never {
+//     while(true) {
+//         console.log("Carregando processos");
+//     }
+// }
 /**
  *  VOID
  *    Ele não terá nenhum retorno
+ *    o type VOID pode receber valor null, que indica ausência de um objeto, ou undefined, que indica a ausência que qualquer valor
  *
  */
 function log() {
@@ -108,7 +241,7 @@ function deleteTeste(usuario) {
 /**
  *      ENUM
  *          O enum nos permite declarar um conjunto de valores/constantes predefinidas
- *          Existe três formas de trabalhar com ele: NUmber; String e Heterogeneus
+ *          Existe três formas de trabalhar com ele: Number; String e Heterogeneus
  *          o enum tipo number não necessita de um valor inícial, mas o tipo string sim
  */
 // export enum DiaDaSemana {
@@ -159,7 +292,7 @@ function deleteTeste(usuario) {
 // }
 // // acessando o valor do Heterogeneous do enum
 // console.log(Heterogeneous.Segunda);
-// console.log(Heterogeneous['Segunda']);
+// console.log(Heterogeneous['Segunda']);k
 // console.log(Heterogeneous['Terca']);
 // console.log(Heterogeneous[1]);
 // console.log(Heterogeneous['Quarta']);

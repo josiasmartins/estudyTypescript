@@ -18,6 +18,8 @@ console.log(a)
  *      - git status: seu arquivos não está tranqueado
  *      - git add .: adiciona todos os arquivos 
  *      - git commit -m: 
+ * 
+ *      Fazer um repositório no gitHub e copiar a url do projeto.
  *      - git remote add origin linkDoRepositorio: envia para o gitHub
  *      - git push origin nomeDaBranch: envia alterações para o repositório
  *      
