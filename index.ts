@@ -14,61 +14,61 @@
  *      HERANÇA
  *          nos permite herdar as heranças através da palavra reservada extends
  */
-export class Conta {
-    numeroDaConta: number;
-    titular: string;
-    private saldo: number;
-}
+// export class Conta {
+//     numeroDaConta: number;
+//     titular: string;
+//     private saldo: number;
+// }
 
-constructor(numeroDaConta: number, titular: string, saldo: number) {
-    this.numeroDaConta = numeroDaConta;
-    this.titular = titular;
-    this.saldo = saldo;
-}
+// constructor(numeroDaConta: number, titular: string, saldo: number) {
+//     this.numeroDaConta = numeroDaConta;
+//     this.titular = titular;
+//     this.saldo = saldo;
+// }
 
-//  método
-consultaSaldo(): string {
-    return `O seu saldo atual é: ${this.saldo}`;
-}
-adicionaSaldo(saldo: number): void {
-    this.saldo + slado;
-}
+// //  método
+// consultaSaldo(): string {
+//     return `O seu saldo atual é: ${this.saldo}`;
+// }
+// adicionaSaldo(saldo: number): void {
+//     this.saldo + slado;
+// }
 
-sacarDoSaldo(valor: number): void {
-    this.saldo -= visualViewport;
-}
+// sacarDoSaldo(valor: number): void {
+//     this.saldo -= visualViewport;
+// }
 
-//  implementação da classe conta
-const primeiraConta = new conta(1, "Thiago Adriano", 1000 ); // new: para reservada para instanciar/criar um novo objeto a partir de uma classe
+// //  implementação da classe conta
+// const primeiraConta = new conta(1, "Thiago Adriano", 1000 ); // new: para reservada para instanciar/criar um novo objeto a partir de uma classe
 
-//  herença
-// class ContaPF extends Conta {}
-// class ContaPJ extends Conta {}
+// //  herença
+// // class ContaPF extends Conta {}
+// // class ContaPJ extends Conta {}
 
-// const pessoaFisica = new ContaPF(1, "Thiago", 100);
-// const pessoaJuridica = new ContaPJ(1, "Thiago", 1000);
+// // const pessoaFisica = new ContaPF(1, "Thiago", 100);
+// // const pessoaJuridica = new ContaPJ(1, "Thiago", 1000);
 
 
-class ContaPF extends Conta {
-    cpf: number;
+// class ContaPF extends Conta {
+//     cpf: number;
 
-    constructor(cpf: number, numeroDaConta: number, titular: string, saldo: number) {
-        super(numeroDaConta, titular, saldo);
-        this.cpf = cpf;
-    }
-}
+//     constructor(cpf: number, numeroDaConta: number, titular: string, saldo: number) {
+//         super(numeroDaConta, titular, saldo);
+//         this.cpf = cpf;
+//     }
+// }
 
-// Adicinando o nnpj na conta pj
-class ContaPJ extends Conta {
-    cnpj: number;
+// // Adicinando o nnpj na conta pj
+// class ContaPJ extends Conta {
+//     cnpj: number;
 
-    constructor(cnpj: number, numeroDaConta: number, titular: string, saldo: number) {
-        super(numeroDaConta, titular, saldo);
-        this.cnpj = cnpj
-    }
-}
+//     constructor(cnpj: number, numeroDaConta: number, titular: string, saldo: number) {
+//         super(numeroDaConta, titular, saldo);
+//         this.cnpj = cnpj
+//     }
+// }
 
-const pessoaJuridica = new ContaPJ(123456, 1, "Thiago Adriano", 100);
+// const pessoaJuridica = new ContaPJ(123456, 1, "Thiago Adriano", 100);
 
 
 /**

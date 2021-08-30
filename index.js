@@ -8,12 +8,56 @@
  *      CLASSES
  *          uma classe é um molde com o qual os objetos são moldados
  *          nele passamos quais atributos um objeto deve ter e quais ações deve tomar
+ *
+ *      MÉTODOS
+ *          são responsavéis por definir e realizar um determinado comportamento
+ *
+ *      HERANÇA
+ *          nos permite herdar as heranças através da palavra reservada extends
  */
-var conta = /** @class */ (function () {
-    function conta() {
-    }
-    return conta;
-}());
+// export class Conta {
+//     numeroDaConta: number;
+//     titular: string;
+//     private saldo: number;
+// }
+// constructor(numeroDaConta: number, titular: string, saldo: number) {
+//     this.numeroDaConta = numeroDaConta;
+//     this.titular = titular;
+//     this.saldo = saldo;
+// }
+// //  método
+// consultaSaldo(): string {
+//     return `O seu saldo atual é: ${this.saldo}`;
+// }
+// adicionaSaldo(saldo: number): void {
+//     this.saldo + slado;
+// }
+// sacarDoSaldo(valor: number): void {
+//     this.saldo -= visualViewport;
+// }
+// //  implementação da classe conta
+// const primeiraConta = new conta(1, "Thiago Adriano", 1000 ); // new: para reservada para instanciar/criar um novo objeto a partir de uma classe
+// //  herença
+// // class ContaPF extends Conta {}
+// // class ContaPJ extends Conta {}
+// // const pessoaFisica = new ContaPF(1, "Thiago", 100);
+// // const pessoaJuridica = new ContaPJ(1, "Thiago", 1000);
+// class ContaPF extends Conta {
+//     cpf: number;
+//     constructor(cpf: number, numeroDaConta: number, titular: string, saldo: number) {
+//         super(numeroDaConta, titular, saldo);
+//         this.cpf = cpf;
+//     }
+// }
+// // Adicinando o nnpj na conta pj
+// class ContaPJ extends Conta {
+//     cnpj: number;
+//     constructor(cnpj: number, numeroDaConta: number, titular: string, saldo: number) {
+//         super(numeroDaConta, titular, saldo);
+//         this.cnpj = cnpj
+//     }
+// }
+// const pessoaJuridica = new ContaPJ(123456, 1, "Thiago Adriano", 100);
 /**
  *      FOREACH
  *          foreach é uma simplificação do operador for para trabalhar com coleções de dados
@@ -154,9 +198,9 @@ var conta = /** @class */ (function () {
  *    o type VOID pode receber valor null, que indica ausência de um objeto, ou undefined, que indica a ausência que qualquer valor
  *
  */
-function log() {
-    console.log('Sem retorno');
-}
+// function log(): void {
+//     console.log('Sem retorno');
+// }
 /**
  *  FUNCTION
  *      tipando funções
@@ -172,9 +216,9 @@ function log() {
  *      qualquer valor
  *
  */
-var variavelAny = "variavel";
-variavelAny = 34;
-variavelAny = true;
+// let variavelAny: any = "variavel";
+// variavelAny = 34;
+// variavelAny = true;
 /**
  *      UNION
  *          O union nos permite combinar mais de um tipo;
@@ -206,17 +250,16 @@ variavelAny = true;
 //     console.log(arr[i]);
 // }
 //como parametros da função
-function deleteTeste(usuario) {
-    if (typeof usuario == "string") { //typeof é um tipo de guarda(type guard). Utilizado quando precisamos verificar o tipo de um objeto dentro de bloco condicional
-        console.log(usuario, "deletado"); //instance
-    }
-    else {
-        var i;
-        for (i = 0; i < usuario.length; i++) {
-            console.log(usuario[i], "deletado");
-        }
-    }
-}
+// function deleteTeste(usuario: string | string[]) {
+//     if(typeof usuario == "string") {                    //typeof é um tipo de guarda(type guard). Utilizado quando precisamos verificar o tipo de um objeto dentro de bloco condicional
+//         console.log(usuario, "deletado");               //instance
+//     } else {
+//         var i;
+//         for(i=0; i < usuario.length; i++) {
+//             console.log(usuario[i], "deletado");
+//         } 
+//     }
+// }
 // let x: string | number | boolean = 13;
 // console.log(typeof(x));
 // interface Z {x(): string}
@@ -343,14 +386,14 @@ function deleteTeste(usuario) {
 // console.log(sentence.length)    //o length mostra o tamanho da string;
 // console.log(sentence.indexOf('nome'))
 /**      NUMBER      */
-var octal = 485;
-var binary = 15;
-var decimal = 34;
-var hex = 0xf34d;
-var octal2 = 485;
-var binary2 = 15;
-var decimal2 = 34;
-var hex2 = 0xf34d;
+// let octal: number = 0o745;
+// let binary: number = 0b1111;
+// let decimal: number = 34;
+// let hex: number = 0xf34d;
+// let octal2 = 0o745;
+// let binary2 = 0b1111;
+// let decimal2 = 34;
+// let hex2 = 0xf34d;
 /**    BOOLEAN         */
 // let ativo: boolean;
 // ativo: false;

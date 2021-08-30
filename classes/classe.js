@@ -1,21 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-exports.__esModule = true;
-exports.Conta = void 0;
 /**
  *      POO(PROGRAMAÇÃO ORIENTADO A OBJETOS)
  *          paradigma é a sua identidade. Classe descreve os serviços oferecidos
@@ -32,56 +15,86 @@ exports.Conta = void 0;
  *      HERANÇA
  *          nos permite herdar as heranças através da palavra reservada extends
  */
-var Conta = /** @class */ (function () {
-    function Conta() {
-    }
-    return Conta;
-}());
-exports.Conta = Conta;
-constructor(numeroDaConta, number, titular, string, saldo, number);
-{
-    this.numeroDaConta = numeroDaConta;
-    this.titular = titular;
-    this.saldo = saldo;
-}
-//  método
-consultaSaldo();
-string;
-{
-    return "O seu saldo atual \u00E9: " + this.saldo;
-}
-adicionaSaldo(saldo, number);
-void {
-    "this": .saldo + slado
-};
-sacarDoSaldo(valor, number);
-void {
-    "this": .saldo -= visualViewport
-};
-//  implementação da classe conta
-var primeiraConta = new conta(1, "Thiago Adriano", 1000); // new: para reservada para instanciar/criar um novo objeto a partir de uma classe
-//  herença
-// class ContaPF extends Conta {}
-// class ContaPJ extends Conta {}
-// const pessoaFisica = new ContaPF(1, "Thiago", 100);
-// const pessoaJuridica = new ContaPJ(1, "Thiago", 1000);
-var ContaPF = /** @class */ (function (_super) {
-    __extends(ContaPF, _super);
-    function ContaPF(cpf, numeroDaConta, titular, saldo) {
-        var _this = _super.call(this, numeroDaConta, titular, saldo) || this;
-        _this.cpf = cpf;
-        return _this;
-    }
-    return ContaPF;
-}(Conta));
-// Adicinando o nnpj na conta pj
-var ContaPJ = /** @class */ (function (_super) {
-    __extends(ContaPJ, _super);
-    function ContaPJ(cnpj, numeroDaConta, titular, saldo) {
-        var _this = _super.call(this, numeroDaConta, titular, saldo) || this;
-        _this.cnpj = cnpj;
-        return _this;
-    }
-    return ContaPJ;
-}(Conta));
-var pessoaJuridica = new ContaPJ(123456, 1, "Thiago Adriano", 100);
+//  export abstract class Conta {
+//     private numeroDaConta: number;
+//     titular: string;
+//     private saldo: number;
+//     constructor(titular: string, saldo: number) {
+//         this.numeroDaConta = Math.floor(Math.random() * 1000) + 1; //gera um número aleatório
+//         this.titular = titular;
+//         this.saldo = saldo;
+//     }
+// //  método
+//      protected consultaSaldo(): number {
+//         return this.saldo;
+//     }
+//     protected adicionaSaldo(saldo: number): void {
+//         this.saldo + saldo;
+//     }
+//     protected sacarDoSaldo(valor: number): void {
+//         this.saldo -= valor;
+//     }
+// //  implementação da classe conta
+// const primeiraConta = new conta(1, "Thiago Adriano", 1000 ); // new: para reservada para instanciar/criar um novo objeto a partir de uma classe
+// }
+// //  herença
+// // class ContaPF extends Conta {}
+// // class ContaPJ extends Conta {}
+// // const pessoaFisica = new ContaPF(1, "Thiago", 100);
+// // const pessoaJuridica = new ContaPJ(1, "Thiago", 1000);
+// class ContaPF extends Conta {
+//     //implementação da classe conta
+//     consultar(): string {
+//         return `Saldo atual: ${this.consultaSaldo()}`;
+//     }
+//     cpf: number;
+//     constructor(cpf: number, numeroDaConta: number, titular: string, saldo: number) {
+//         super(numeroDaConta, titular, saldo);
+//         this.cpf = cpf;
+//     }
+// }
+// // Adicinando o cnpj na conta pj
+// class ContaPJ extends Conta {
+//     // implementação da conta da classe Conta
+//     // sacar(valor: number) {
+//     //     this.sacarDoSaldo(valor)
+//     // }
+//     sacar(valor: number) {
+//         if(this.consultaSaldo() > 0 && valor <= this.consultaSaldo()) {
+//             this.sacarDoSaldo(valor);
+//         }
+//     }
+//     consultar(): string {
+//         return `Saldo atual: ${this.consultaSaldo()}`;
+//     }
+//     cnpj: number;
+//     constructor(cnpj: number, numeroDaConta: number, titular: string, saldo: number) {
+//         super(numeroDaConta, titular, saldo);
+//         this.cnpj = cnpj
+//     }
+// }
+// const pessoaJuridica = new ContaPJ(123456, 1, "Thiago Adriano", 100);
+// /**
+//  *      getter: utilizado para acessar o valor de uma propriedade de objeto
+//  *      setter: utilizado para alterar o valor de uma propriedade de objeto
+//  *      _ utilizado pela comunidade para dizer que o método é privado
+//  */
+// class Conta {
+//     private _numeroDaConta: number;
+//     titular: string;
+//     private _saldo: number;
+//     get numeroDaConta(): number {
+//         return this._numeroDaConta;
+//     }
+// }
+// console.log(pessoaJuridica.numeroDaConta);
+// /**
+//  *      CLASSES ABSTRATA
+//  *          as classes abstratas não permite realizar qualquer tipo de instância
+//  *          são utilizadas como modelos para outras classes, que são reconhecida como concreta
+//  */
+// abstract class Conta {
+//     // readonly: a propriedade dentro da classe seja utilizada somente como leitura
+//     private readonly _numeroDaConta: number;
+//     // implementação da classe 
+// }
