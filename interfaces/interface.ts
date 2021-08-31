@@ -52,18 +52,18 @@ interface Tributavel {
 }
 
 // implements: palavra reservada usado para implementar 
-class Conta {}
+// class Conta {}
 
-class ContaPJ extends Conta implements Tributavel {
+// class ContaPJ extends Conta implements Tributavel {
 
-    CalculaTributo(): number {
-        // implementa o valor para o calculo
-    }
-}
+//     CalculaTributo(): number {
+//         // implementa o valor para o calculo
+//     }
+// }
 
-class ContaPF extends Conta implements Tributavel {
+// class ContaPF extends Conta implements Tributavel {
 
-    CalculaTributo(): number {
-        // implementa o cálculo tributário para a ContaPF
-    }
-}
+//     CalculaTributo(): number {
+//         // implementa o cálculo tributário para a ContaPF
+//     }
+// }

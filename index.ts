@@ -8,11 +8,15 @@
  *          uma classe é um molde com o qual os objetos são moldados
  *          nele passamos quais atributos um objeto deve ter e quais ações deve tomar
  * 
+ *          CONSTRUCTOR
+ *              usado para acessar o valor e atribuir o valor do seus parâmetros aos nosso atributos
+ * 
  *      MÉTODOS
  *          são responsavéis por definir e realizar um determinado comportamento
  * 
  *      HERANÇA
  *          nos permite herdar as heranças através da palavra reservada extends
+ * 
  */
 // export class Conta {
 //     numeroDaConta: number;
